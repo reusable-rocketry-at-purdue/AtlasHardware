@@ -354,23 +354,23 @@ CS_Barrom
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5E36079F
-P 5400 4550
-F 0 "#FLG0101" H 5400 4625 50  0001 C CNN
-F 1 "PWR_FLAG" V 5400 4677 50  0000 L CNN
-F 2 "" H 5400 4550 50  0001 C CNN
-F 3 "~" H 5400 4550 50  0001 C CNN
-	1    5400 4550
+P 5100 4450
+F 0 "#FLG0101" H 5100 4525 50  0001 C CNN
+F 1 "PWR_FLAG" V 5100 4577 50  0000 L CNN
+F 2 "" H 5100 4450 50  0001 C CNN
+F 3 "~" H 5100 4450 50  0001 C CNN
+	1    5100 4450
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:+3.3V #PWR0101
 U 1 1 5E354748
-P 5400 4550
-F 0 "#PWR0101" H 5400 4400 50  0001 C CNN
-F 1 "+3.3V" H 5415 4723 50  0000 C CNN
-F 2 "" H 5400 4550 50  0001 C CNN
-F 3 "" H 5400 4550 50  0001 C CNN
-	1    5400 4550
+P 5100 4450
+F 0 "#PWR0101" H 5100 4300 50  0001 C CNN
+F 1 "+3.3V" H 5115 4623 50  0000 C CNN
+F 2 "" H 5100 4450 50  0001 C CNN
+F 3 "" H 5100 4450 50  0001 C CNN
+	1    5100 4450
 	1    0    0    -1  
 $EndComp
 Text Label 5400 5050 0    50   ~ 0
@@ -383,19 +383,6 @@ Text Label 5400 4850 0    50   ~ 0
 RX
 Text Label 5400 4750 0    50   ~ 0
 TX
-$Comp
-L Connector:Conn_01x10_Female J1
-U 1 1 5E34D348
-P 6050 4950
-F 0 "J1" H 6078 4926 50  0000 L CNN
-F 1 "Board->Board" H 6078 4835 50  0000 L CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-10A_1x10_P2.54mm_Vertical" H 6050 4950 50  0001 C CNN
-F 3 "~" H 6050 4950 50  0001 C CNN
-	1    6050 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5850 4550 5400 4550
 Wire Wire Line
 	5850 4750 5400 4750
 Wire Wire Line
@@ -410,17 +397,15 @@ Wire Wire Line
 	5850 5250 5400 5250
 Wire Wire Line
 	5850 5350 5400 5350
-Connection ~ 5400 4550
-Wire Wire Line
-	5850 4650 5400 4650
+Connection ~ 5100 4450
 Text Label 5400 4650 0    50   ~ 0
-Ignite
+Release
 $Comp
 L Connector:Conn_01x02_Female J2
 U 1 1 5E37B8E1
 P 6050 5950
 F 0 "J2" H 6078 5926 50  0000 L CNN
-F 1 "Ignite_Header" H 6078 5835 50  0000 L CNN
+F 1 "Release_Header" H 6078 5835 50  0000 L CNN
 F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 6050 5950 50  0001 C CNN
 F 3 "~" H 6050 5950 50  0001 C CNN
 	1    6050 5950
@@ -428,21 +413,6 @@ F 3 "~" H 6050 5950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5850 5950 5550 5950
-Text Label 5550 5950 0    50   ~ 0
-Ignite
-$Comp
-L power:GND #PWR015
-U 1 1 5E37E9BA
-P 5550 6050
-F 0 "#PWR015" H 5550 5800 50  0001 C CNN
-F 1 "GND" H 5555 5877 50  0000 C CNN
-F 2 "" H 5550 6050 50  0001 C CNN
-F 3 "" H 5550 6050 50  0001 C CNN
-	1    5550 6050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 6050 5850 6050
 Wire Wire Line
 	5400 5450 5700 5450
 $Comp
@@ -552,4 +522,29 @@ Wire Wire Line
 Connection ~ 2100 1700
 Wire Wire Line
 	2100 1700 1850 1700
+$Comp
+L Connector:Conn_01x11_Male J1
+U 1 1 5E5632B6
+P 6050 4950
+F 0 "J1" H 6158 5631 50  0000 C CNN
+F 1 "Conn_01x11_Male" H 6158 5540 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-11A_1x11_P2.54mm_Vertical" H 6050 4950 50  0001 C CNN
+F 3 "~" H 6050 4950 50  0001 C CNN
+	1    6050 4950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5100 4450 5850 4450
+Text Label 5300 4550 0    50   ~ 0
+Release_Return
+Wire Wire Line
+	5300 4550 5850 4550
+Wire Wire Line
+	5850 4650 5400 4650
+Text Label 5550 5950 0    50   ~ 0
+Release
+Text Label 5250 6050 0    50   ~ 0
+Release_Return
+Wire Wire Line
+	5250 6050 5850 6050
 $EndSCHEMATC
